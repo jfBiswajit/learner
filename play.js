@@ -1,10 +1,15 @@
-let name = 'Biswajit';
-let age = 23;
-let hasHobby = true;
-
-function getUserInfo(name, age, hasHobby) {
-  return 'Hey this is ' + name + ' and he is ' + age + ' years old.';
+// Js promises
+const fetchData = function () {
+  const promise = new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve('Success');
+    }, 2000);
+  });
+  
+  return promise;
 }
 
 
-console.log(getUserInfo(name, age, hasHobby));
+fetchData()
+  .then((data) => console.log('success'))
+  .catch();
